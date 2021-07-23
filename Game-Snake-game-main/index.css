@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.background {
+  background-image: url(./images/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.snake-bg {
+  background-image: url(./images/p1.png);
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.box {
+  background-color: rgba(51, 255, 0, 0.267);
+  border: 10px solid black;
+  height: 80vmin;
+  width: 80vmin;
+  /* z-index: 1000; */
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  z-index: 10000;
+}
+.food {
+  /* background-color: blueviolet; */
+  background-image: url(./images/apple.png);
+  background-size: 40px;
+  background-position: center;
+  /* border-radius: 10px; */
+  /* border: 2px solid black; */
+}
+.snake-head {
+  z-index: 100;
+  background-color: blueviolet;
+  border: 2px solid black;
+}
+.snake-body {
+  background-color: burlywood;
+  border: 2px solid black;
+  /* border-radius: 10px; */
+}
+.control {
+  display: none;
+}
+.play-btn {
+  display: none;
+  position: absolute;
+  bottom: 50vh;
+  right: 45vw;
+  padding: 20px;
+  background-color: darkcyan;
+  border: 10px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  z-index: 100000;
+}
+.message {
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 800px) {
+  .play-btn {
+    display: block;
+    position: absolute;
+    bottom: 50vh;
+    right: 37vw;
+    padding: 20px;
+    background-color: darkcyan;
+    border: 10px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    z-index: 100000;
+  }
+  .control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    background-color: aqua;
+  }
+}
+.score {
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+.high-score {
+  position: absolute;
+  right: 100px;
+  top: 200px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/character.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <!-- link font awsm -->
+    <script
+      src="https://kit.fontawesome.com/25e32ff654.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- linking favicon -->
+    <link rel="shortcut icon" href="./enemy/dino.png" type="image/x-icon" />
+    <!--  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dino Hunt || Let the hunt begin</title>
+  </head>
+  <body>
+    <!-- display instructions -->
+    <div class="alert">
+      <h1>INSTRUCTIONS</h1>
+      <br />
+      <ol>
+        <li>Press uparrow key to jump the avatar</li>
+        <li>Press left arrow key to move left</li>
+        <li>Press right arrow key to move right</li>
+        <br />
+        <h1>FOR MOBILE:</h1>
+        <li>Touch the avtar to jump</li>
+        <li>Touch left screem side to move left</li>
+        <li>Touch right screen side of mobile to move right</li>
+      </ol>
+      <h3>PLEASE ROTATE YOUR PHONE !!!! <br />RECOMMENDED--LANDSCAPE</h3>
+      <br />
+      <button onclick="alerthide()">Start</button>
+    </div>
+    <!--mobile controls -->
+    <div class="control-box">
+      <div class="left-control" onclick="moveleft()">
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <div class="right-control" onclick="moveright()">
+        <i class="fa fa-chevron-right"></i>
+      </div>
+    </div>
+    <!-- main body content -->
+    <div class="content" onclick="toggleplay()">Start Game</div>
+    <!-- top setting button -->
+    <div class="setting display" onclick="togglehide()">
+      <span class="fa fa-pause"></span>
+    </div>
+    <!-- menu 
+    click on seeting button this menu will open -->
+    <div class="menu display">
+      <div onclick="togglehide()"><a>Resume</a></div>
+      <div onclick="characterchoice()"><a>Change Character</a></div>
+      <div><a href="./index.html">Exit</a></div>
+    </div>
+    <div class="setc display">
+      <ul>
+        <li>
+          <img onclick="setcharcater(0)" src="./character/dc.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(1)" src="./character/bc1.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(2)" src="./character/bc2.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(3)" src="./character/bc3.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(4)" src="./character/bc4.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(5)" src="./character/bc5.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(6)" src="./character/bc6.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(7)" src="./character/gc1.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(8)" src="./character/gc2.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(9)" src="./character/gc3.png" alt="" />
+        </li>
+        <li>
+          <img onclick="setcharcater(10)" src="./character/gc4.png" alt="" />
+        </li>
+        <li>
+          <img
+            onclick="setcharcater(11)"
+            src="./character/common_character.png"
+          />
+        </li>
+
+        <li>
+          <img
+            onclick="setcharcater(12)"
+            src="./character/common_charcater_2.png"
+            alt=""
+          />
+        </li>
+
+        <li>
+          <img
+            onclick="setcharcater(13)"
+            src="./character/common_charcter3.png"
+            alt=""
+          />
+        </li>
+
+        <li>
+          <img
+            onclick="setcharcater(14)"
+            src="./character/coomon charcter.png"
+            alt=""
+          />
+        </li>
+      </ul>
+      <button class="btn" onclick="toggleplay()">Done</button>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div>Score=<span class="score display">0</span></div>
+      </div>
+      <div class="stage-1"></div>
+      <div class="default-charcter" onclick="addjump()">
+        <img class="left" id="left" src="./character/bc2.png" alt="" />
+      </div>
+      <div class="enemy"></div>
+
+      <div class="footer"></div>
+    </div>
+
+    <script src="./js/control.js"></script>
+    <script src="./js/game.js"></script>
+  </body>
+</html>

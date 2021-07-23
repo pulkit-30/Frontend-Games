@@ -1,0 +1,120 @@
+/* import fonts from google ::::google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.doc a {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  /* z-index: 1000; */
+  cursor: pointer;
+}
+
+.logo a {
+  font-size: 5rem;
+  color: rgb(255, 166, 0);
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+}
+.background {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  background-image: url(../background/stage6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+}
+
+.container {
+  position: absolute;
+  top: 40vh;
+  right: 0vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 0; */
+  overflow: hidden;
+}
+.container a {
+  text-align: center;
+  cursor: pointer;
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 2px 2px 10px black;
+  padding: 2rem;
+  border-radius: 20px;
+  color: rgb(255, 166, 0);
+  transition: 1s;
+  z-index: 1000;
+}
+.container a:hover {
+  border-radius: 100px;
+  text-shadow: none;
+  background: rgb(255, 166, 0);
+  text-shadow: 2px 2px 10px black;
+  color: white;
+}
+.footer {
+  overflow: hidden;
+  height: 100px;
+  width: 100vw;
+  background-image: url(../footer/grass-removebg-preview.png);
+  position: fixed;
+  bottom: 0;
+}
+.character img {
+  /* background-color: crimson; */
+  position: relative;
+  bottom: -100px;
+  width: 40rem;
+  /* margin-left: -150px; */
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+    overflow: hidden;
+  }
+
+  .logo a {
+    font-size: 4rem;
+
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+  }
+  .background {
+    filter: blur(5px);
+  }
+  .character img {
+    width: 20rem;
+    /* background-color: darkkhaki; */
+    margin: 20px;
+    height: 80vh;
+    bottom: 1rem;
+    z-index: -1;
+    opacity: 0.65;
+  }
+  .doc {
+    font-size: 0.89rem;
+    /* display: none; */
+  }
+}

@@ -1,0 +1,31 @@
+.max-width {
+  max-width: 80vw;
+}
+.min-width {
+  max-width: 80vw;
+}
+.margin {
+  margin: auto;
+}
+a {
+  color: rgb(255, 166, 0);
+}
+a:hover {
+  color: rgb(228, 157, 25);
+}
+i {
+  color: white;
+}
+hr {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  height: 2px;
+}
+button {
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(255, 166, 0);
+  font-size: 20px;
+  font-weight: bold;
+}

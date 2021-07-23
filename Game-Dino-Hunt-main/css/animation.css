@@ -1,0 +1,99 @@
+.moving {
+  /* width: 100vw; */
+  animation-name: moving;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 700px) {
+  .slide {
+    width: 100vw;
+    transition: 2s;
+    animation-name: slide;
+
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+.shake {
+  animation-name: shake;
+  animation-timing-function: ease-in-out;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+.jump {
+  animation-name: jump;
+  animation-iteration-count: infinite;
+
+  animation-duration: 2s;
+}
+.slide {
+  width: 200vw;
+  transition: 2s;
+  animation-name: slide;
+  /* animation-delay: 1s; */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* .left {
+  ma: 30px;
+} */
+@keyframes jump {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 50vh;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes slide {
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes moving {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 50vw;
+  }
+  100% {
+    right: 100vw;
+  }
+}
+@keyframes shake {
+  0% {
+    width: 100vw;
+  }
+  50% {
+    width: 102vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* @keyframes slide {
+  from {
+    left: -800px;
+  }
+  to {
+    left: 10px;
+  }
+} */

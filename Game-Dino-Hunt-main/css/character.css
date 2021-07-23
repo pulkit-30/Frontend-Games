@@ -1,0 +1,57 @@
+.setc {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.658);
+  z-index: 150;
+  border-radius: 20px;
+  margin: 0px;
+  box-shadow: 2px 2px 30px black;
+}
+.setc ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+}
+.setc ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.setc ul li img {
+  width: 15rem;
+  z-index: 100;
+}
+@media (max-width: 700px) {
+  .setc {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    right: 0;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.534);
+    z-index: 150;
+    border-radius: 0px;
+    margin: 0px;
+    box-shadow: 2px 2px 30px black;
+  }
+  .setc ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+  }
+  .setc ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+  .setc ul li img {
+    width: 7rem;
+    z-index: 100;
+  }
+}

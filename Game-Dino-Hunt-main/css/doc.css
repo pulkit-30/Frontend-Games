@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&family=Zen+Dots&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 100;
+  /* padding: 23px; */
+}
+.navbar i {
+  cursor: pointer;
+  font-size: 23px;
+}
+.logo {
+  font-family: "Yellowtail", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px black;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+
+  background-color: blueviolet;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  transform: skewy(8deg);
+  transform-origin: 150%;
+  filter: blur(5px);
+}
+.first {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+.first img {
+  height: 70vh;
+}
+.heading {
+  font-weight: bold;
+  font-family: "Zen Dots", cursive;
+  font-size: 3rem;
+  color: rgb(255, 0, 64);
+}
+.two {
+  font-size: 1.5rem;
+  padding: 80px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.character {
+  height: 40vh;
+}
+
+.third {
+  /* height: 100vh; */
+  background-color: blueviolet;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  text-align: center;
+}
+.box {
+  text-align: center;
+  margin: 50px;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  filter: opacity(0.35);
+  /* position: absolute;
+  top: 0; */
+  /* background-color: darkblue; */
+}
+.container img {
+  width: 150px;
+  /* z-index: 10; */
+  /* background-color: darkblue; */
+}
+.fourth {
+  color: white;
+  text-align: center;
+  /* height: 80vh; */
+  padding: 20px 0px;
+  margin: 10px 0px;
+  background-color: rgb(71, 64, 64);
+}
+.fourth img {
+  padding: 20px;
+  width: 600px;
+}
+.fourth h1 {
+  margin: 30px 0px;
+}
+footer {
+  color: white;
+  height: 50vh;
+  background-color: rgb(32, 32, 32);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer div {
+  margin: 20px 0px;
+}
+/* .foot-background {
+  position: fixed;
+  bottom: -270px;
+  height: 60vh;
+  width: 100%;
+  background-color: black;
+  transform: skewY(8deg);
+  transform-origin: 100%;
+} */

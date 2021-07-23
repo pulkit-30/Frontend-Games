@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  box-shadow: inset 0px 0px 50px black;
+  overflow: hidden;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.877) 50%,
+    rgba(0, 128, 0, 0.829) 50%
+  );
+  filter: blur(30px);
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 0.808) 50%,
+    rgba(255, 255, 0, 0.801) 50%
+  );
+  filter: blur(30px);
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-family: "Zen Dots", cursive;
+  opacity: 0.25;
+  font-size: 22em;
+
+  z-index: 0;
+}
+.container {
+  height: 580px;
+  width: 580px;
+  background-color: rgba(255, 254, 254, 0.11);
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgb(7, 7, 7);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8000px;
+  border: 10px solid black;
+}
+.box {
+  cursor: pointer;
+  margin: 2px;
+  height: 280px;
+  width: 280px;
+  background-color: black;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px black;
+}
+.box span {
+  display: none;
+}
+.red {
+  z-index: 1;
+  border-top-left-radius: 600px;
+  background-color: red;
+}
+.blue {
+  border-bottom-left-radius: 600px;
+  background-color: blue;
+}
+.green {
+  border-top-right-radius: 600px;
+  background-color: green;
+}
+.yellow {
+  border-bottom-right-radius: 600px;
+  background-color: yellow;
+}
+.active {
+  background-color: honeydew;
+  margin: 0;
+  width: 290px;
+  height: 290px;
+  box-shadow: 0px 0px 20px white;
+}
+.click {
+  border-radius: 100px;
+  padding: 5px 7px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.off {
+  transition: 1s;
+  text-shadow: 0px 0px 5px rgb(252, 137, 137);
+  color: rgb(255, 0, 0);
+}
+.on {
+  transition: 1s;
+  color: green;
+  text-shadow: 0px 0px 5px rgb(71, 255, 71);
+}
+.play-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Zen Dots", cursive;
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(109, 109, 109);
+  box-shadow: 0px 0px 10px black, -1px 1px 10px black, 1px -1px 10px black,
+    0px 1px 10px rgb(0, 0, 0), 1px 0px 10px black;
+  border-radius: 300px;
+}
+.error {
+  background-color: rgb(160, 0, 0);
+  box-shadow: 10px 10px 100px 10px rgb(160, 0, 0);
+}
+.loader {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(30deg, red, green, blue, yellow);
+  background-blend-mode: lighten;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader img {
+  width: 10rem;
+  animation: load 2s linear infinite;
+  transition: 2s;
+}
+@media (max-width: 1273px) {
+  h1 {
+    font-size: 17rem;
+  }
+}
+@media (max-width: 1048px) {
+  h1 {
+    display: none;
+  }
+}
+@media (max-width: 608px) {
+  .container {
+    height: 450px;
+    width: 450px;
+  }
+  .box {
+    margin: 1px;
+    height: 220px;
+    width: 220px;
+  }
+  .play-box {
+    height: 15rem;
+    width: 15rem;
+    font-size: 15px;
+  }
+  .message {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    height: 330px;
+    width: 330px;
+  }
+  .box {
+    margin: 1px;
+    height: 160px;
+    width: 160px;
+  }
+  .play-box {
+    height: 10rem;
+    width: 10rem;
+    font-size: 15px;
+  }
+  .message {
+    font-size: 11px;
+  }
+}
+@media (max-width: 340px) {
+  .container {
+    height: 230px;
+    width: 230px;
+  }
+  .box {
+    margin: 1px;
+    height: 110px;
+    width: 110px;
+  }
+  .play-box {
+    font-size: 10px;
+    height: 7rem;
+    width: 7rem;
+  }
+  .message {
+    font-size: 8px;
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(360deg);
+  }
+}
