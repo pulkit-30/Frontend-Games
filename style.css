@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Titillium+Web:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #1d1d1d;
+  --secondary-color: white;
+  --primary-font: "Titillium Web", sans-serif;
+  --secondary-font: "Righteous", cursive;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  padding: 20px 0px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 4px;
+  font-family: var(--secondary-font);
+}
+h2 {
+  letter-spacing: 4px;
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 20px 0px;
+}
+.projectBox {
+  position: relative;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+iframe {
+  width: 80vw;
+  height: 80vh;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 30px 0px;
+
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  overflow: hidden !important;
+}
+
+p {
+  width: 70vw;
+  font-size: 20px;
+}
+
+.button {
+  text-decoration: none;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: var(--secondary-color);
+  background-color: rgb(77, 118, 253);
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+  width: 100px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+hr {
+  width: 50vw;
+  margin: 50px auto;
+  border: none;
+  background-color: white;
+  height: 2px;
+}
+.fa-expand {
+  font-size: 20px;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 100;
+  cursor: pointer;
+}
+.hide-text {
+  display: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.background i {
+  position: absolute;
+  animation: blink 2s ease-in-out 1;
+  -webkit-animation: blink 2s ease-in-out 1;
+  opacity: 0.5;
+  font-size: 30px;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
